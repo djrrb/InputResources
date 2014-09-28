@@ -1,0 +1,1075 @@
+
+
+
+
+
+//////////////////////////////////////////
+//////////////////////////////////////////
+// @FONT-FACE CALLS
+// Load the entire family from local fonts
+// so we can structure the family how we like.
+// Since font-stretch is not supported,
+// add width as a number to the family name.
+// Use weight values in increments of 100.
+///////////////////////////////////////////
+
+@font-face {
+  src: local("InputSans-Thin");
+  font-family: "Input Sans 5";
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputSans-ThinItalic");
+  font-family: "Input Sans 5";
+  font-weight: 100;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputSans-ExtraLight");
+  font-family: "Input Sans 5";
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputSans-ExtraLightItalic");
+  font-family: "Input Sans 5";
+  font-weight: 200;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputSans-Light");
+  font-family: "Input Sans 5";
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputSans-LightItalic");
+  font-family: "Input Sans 5";
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputSans-Regular");
+  font-family: "Input Sans 5";
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputSans-Italic");
+  font-family: "Input Sans 5";
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputSans-Medium");
+  font-family: "Input Sans 5";
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputSans-MediumItalic");
+  font-family: "Input Sans 5";
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputSans-Bold");
+  font-family: "Input Sans 5";
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputSans-BoldItalic");
+  font-family: "Input Sans 5";
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputSans-Black");
+  font-family: "Input Sans 5";
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputSans-BlackItalic");
+  font-family: "Input Sans 5";
+  font-weight: 800;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputSansNarrow-Thin");
+  font-family: "Input Sans 4";
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputSansNarrow-ThinItalic");
+  font-family: "Input Sans 4";
+  font-weight: 100;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputSansNarrow-ExtraLight");
+  font-family: "Input Sans 4";
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputSansNarrow-ExtraLightItalic");
+  font-family: "Input Sans 4";
+  font-weight: 200;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputSansNarrow-Light");
+  font-family: "Input Sans 4";
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputSansNarrow-LightItalic");
+  font-family: "Input Sans 4";
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputSansNarrow-Regular");
+  font-family: "Input Sans 4";
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputSansNarrow-Italic");
+  font-family: "Input Sans 4";
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputSansNarrow-Medium");
+  font-family: "Input Sans 4";
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputSansNarrow-MediumItalic");
+  font-family: "Input Sans 4";
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputSansNarrow-Bold");
+  font-family: "Input Sans 4";
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputSansNarrow-BoldItalic");
+  font-family: "Input Sans 4";
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputSansNarrow-Black");
+  font-family: "Input Sans 4";
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputSansNarrow-BlackItalic");
+  font-family: "Input Sans 4";
+  font-weight: 800;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputSansCondensed-Thin");
+  font-family: "Input Sans 3";
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputSansCondensed-ThinItalic");
+  font-family: "Input Sans 3";
+  font-weight: 100;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputSansCondensed-ExtraLight");
+  font-family: "Input Sans 3";
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputSansCondensed-ExtraLightItalic");
+  font-family: "Input Sans 3";
+  font-weight: 200;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputSansCondensed-Light");
+  font-family: "Input Sans 3";
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputSansCondensed-LightItalic");
+  font-family: "Input Sans 3";
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputSansCondensed-Regular");
+  font-family: "Input Sans 3";
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputSansCondensed-Italic");
+  font-family: "Input Sans 3";
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputSansCondensed-Medium");
+  font-family: "Input Sans 3";
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputSansCondensed-MediumItalic");
+  font-family: "Input Sans 3";
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputSansCondensed-Bold");
+  font-family: "Input Sans 3";
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputSansCondensed-BoldItalic");
+  font-family: "Input Sans 3";
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputSansCondensed-Black");
+  font-family: "Input Sans 3";
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputSansCondensed-BlackItalic");
+  font-family: "Input Sans 3";
+  font-weight: 800;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputSansCompressed-Thin");
+  font-family: "Input Sans 2";
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputSansCompressed-ThinItalic");
+  font-family: "Input Sans 2";
+  font-weight: 100;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputSansCompressed-ExtraLight");
+  font-family: "Input Sans 2";
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputSansCompressed-ExtraLightItalic");
+  font-family: "Input Sans 2";
+  font-weight: 200;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputSansCompressed-Light");
+  font-family: "Input Sans 2";
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputSansCompressed-LightItalic");
+  font-family: "Input Sans 2";
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputSansCompressed-Regular");
+  font-family: "Input Sans 2";
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputSansCompressed-Italic");
+  font-family: "Input Sans 2";
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputSansCompressed-Medium");
+  font-family: "Input Sans 2";
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputSansCompressed-MediumItalic");
+  font-family: "Input Sans 2";
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputSansCompressed-Bold");
+  font-family: "Input Sans 2";
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputSansCompressed-BoldItalic");
+  font-family: "Input Sans 2";
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputSansCompressed-Black");
+  font-family: "Input Sans 2";
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputSansCompressed-BlackItalic");
+  font-family: "Input Sans 2";
+  font-weight: 800;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputSerif-Thin");
+  font-family: "Input Serif 5";
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputSerif-ThinItalic");
+  font-family: "Input Serif 5";
+  font-weight: 100;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputSerif-ExtraLight");
+  font-family: "Input Serif 5";
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputSerif-ExtraLightItalic");
+  font-family: "Input Serif 5";
+  font-weight: 200;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputSerif-Light");
+  font-family: "Input Serif 5";
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputSerif-LightItalic");
+  font-family: "Input Serif 5";
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputSerif-Regular");
+  font-family: "Input Serif 5";
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputSerif-Italic");
+  font-family: "Input Serif 5";
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputSerif-Medium");
+  font-family: "Input Serif 5";
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputSerif-MediumItalic");
+  font-family: "Input Serif 5";
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputSerif-Bold");
+  font-family: "Input Serif 5";
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputSerif-BoldItalic");
+  font-family: "Input Serif 5";
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputSerif-Black");
+  font-family: "Input Serif 5";
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputSerif-BlackItalic");
+  font-family: "Input Serif 5";
+  font-weight: 800;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputSerifNarrow-Thin");
+  font-family: "Input Serif 4";
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputSerifNarrow-ThinItalic");
+  font-family: "Input Serif 4";
+  font-weight: 100;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputSerifNarrow-ExtraLight");
+  font-family: "Input Serif 4";
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputSerifNarrow-ExtraLightItalic");
+  font-family: "Input Serif 4";
+  font-weight: 200;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputSerifNarrow-Light");
+  font-family: "Input Serif 4";
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputSerifNarrow-LightItalic");
+  font-family: "Input Serif 4";
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputSerifNarrow-Regular");
+  font-family: "Input Serif 4";
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputSerifNarrow-Italic");
+  font-family: "Input Serif 4";
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputSerifNarrow-Medium");
+  font-family: "Input Serif 4";
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputSerifNarrow-MediumItalic");
+  font-family: "Input Serif 4";
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputSerifNarrow-Bold");
+  font-family: "Input Serif 4";
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputSerifNarrow-BoldItalic");
+  font-family: "Input Serif 4";
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputSerifNarrow-Black");
+  font-family: "Input Serif 4";
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputSerifNarrow-BlackItalic");
+  font-family: "Input Serif 4";
+  font-weight: 800;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputSerifCondensed-Thin");
+  font-family: "Input Serif 3";
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputSerifCondensed-ThinItalic");
+  font-family: "Input Serif 3";
+  font-weight: 100;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputSerifCondensed-ExtraLight");
+  font-family: "Input Serif 3";
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputSerifCondensed-ExtraLightItalic");
+  font-family: "Input Serif 3";
+  font-weight: 200;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputSerifCondensed-Light");
+  font-family: "Input Serif 3";
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputSerifCondensed-LightItalic");
+  font-family: "Input Serif 3";
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputSerifCondensed-Regular");
+  font-family: "Input Serif 3";
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputSerifCondensed-Italic");
+  font-family: "Input Serif 3";
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputSerifCondensed-Medium");
+  font-family: "Input Serif 3";
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputSerifCondensed-MediumItalic");
+  font-family: "Input Serif 3";
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputSerifCondensed-Bold");
+  font-family: "Input Serif 3";
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputSerifCondensed-BoldItalic");
+  font-family: "Input Serif 3";
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputSerifCondensed-Black");
+  font-family: "Input Serif 3";
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputSerifCondensed-BlackItalic");
+  font-family: "Input Serif 3";
+  font-weight: 800;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputSerifCompressed-Thin");
+  font-family: "Input Serif 2";
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputSerifCompressed-ThinItalic");
+  font-family: "Input Serif 2";
+  font-weight: 100;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputSerifCompressed-ExtraLight");
+  font-family: "Input Serif 2";
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputSerifCompressed-ExtraLightItalic");
+  font-family: "Input Serif 2";
+  font-weight: 200;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputSerifCompressed-Light");
+  font-family: "Input Serif 2";
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputSerifCompressed-LightItalic");
+  font-family: "Input Serif 2";
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputSerifCompressed-Regular");
+  font-family: "Input Serif 2";
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputSerifCompressed-Italic");
+  font-family: "Input Serif 2";
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputSerifCompressed-Medium");
+  font-family: "Input Serif 2";
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputSerifCompressed-MediumItalic");
+  font-family: "Input Serif 2";
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputSerifCompressed-Bold");
+  font-family: "Input Serif 2";
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputSerifCompressed-BoldItalic");
+  font-family: "Input Serif 2";
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputSerifCompressed-Black");
+  font-family: "Input Serif 2";
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputSerifCompressed-BlackItalic");
+  font-family: "Input Serif 2";
+  font-weight: 800;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputMono-Thin");
+  font-family: "Input Mono 5";
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputMono-ThinItalic");
+  font-family: "Input Mono 5";
+  font-weight: 100;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputMono-ExtraLight");
+  font-family: "Input Mono 5";
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputMono-ExtraLightItalic");
+  font-family: "Input Mono 5";
+  font-weight: 200;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputMono-Light");
+  font-family: "Input Mono 5";
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputMono-LightItalic");
+  font-family: "Input Mono 5";
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputMono-Regular");
+  font-family: "Input Mono 5";
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputMono-Italic");
+  font-family: "Input Mono 5";
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputMono-Medium");
+  font-family: "Input Mono 5";
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputMono-MediumItalic");
+  font-family: "Input Mono 5";
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputMono-Bold");
+  font-family: "Input Mono 5";
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputMono-BoldItalic");
+  font-family: "Input Mono 5";
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputMono-Black");
+  font-family: "Input Mono 5";
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputMono-BlackItalic");
+  font-family: "Input Mono 5";
+  font-weight: 800;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputMonoNarrow-Thin");
+  font-family: "Input Mono 4";
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputMonoNarrow-ThinItalic");
+  font-family: "Input Mono 4";
+  font-weight: 100;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputMonoNarrow-ExtraLight");
+  font-family: "Input Mono 4";
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputMonoNarrow-ExtraLightItalic");
+  font-family: "Input Mono 4";
+  font-weight: 200;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputMonoNarrow-Light");
+  font-family: "Input Mono 4";
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputMonoNarrow-LightItalic");
+  font-family: "Input Mono 4";
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputMonoNarrow-Regular");
+  font-family: "Input Mono 4";
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputMonoNarrow-Italic");
+  font-family: "Input Mono 4";
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputMonoNarrow-Medium");
+  font-family: "Input Mono 4";
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputMonoNarrow-MediumItalic");
+  font-family: "Input Mono 4";
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputMonoNarrow-Bold");
+  font-family: "Input Mono 4";
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputMonoNarrow-BoldItalic");
+  font-family: "Input Mono 4";
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputMonoNarrow-Black");
+  font-family: "Input Mono 4";
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputMonoNarrow-BlackItalic");
+  font-family: "Input Mono 4";
+  font-weight: 800;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputMonoCondensed-Thin");
+  font-family: "Input Mono 3";
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputMonoCondensed-ThinItalic");
+  font-family: "Input Mono 3";
+  font-weight: 100;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputMonoCondensed-ExtraLight");
+  font-family: "Input Mono 3";
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputMonoCondensed-ExtraLightItalic");
+  font-family: "Input Mono 3";
+  font-weight: 200;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputMonoCondensed-Light");
+  font-family: "Input Mono 3";
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputMonoCondensed-LightItalic");
+  font-family: "Input Mono 3";
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputMonoCondensed-Regular");
+  font-family: "Input Mono 3";
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputMonoCondensed-Italic");
+  font-family: "Input Mono 3";
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputMonoCondensed-Medium");
+  font-family: "Input Mono 3";
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputMonoCondensed-MediumItalic");
+  font-family: "Input Mono 3";
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputMonoCondensed-Bold");
+  font-family: "Input Mono 3";
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputMonoCondensed-BoldItalic");
+  font-family: "Input Mono 3";
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputMonoCondensed-Black");
+  font-family: "Input Mono 3";
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputMonoCondensed-BlackItalic");
+  font-family: "Input Mono 3";
+  font-weight: 800;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputMonoCompressed-Thin");
+  font-family: "Input Mono 2";
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputMonoCompressed-ThinItalic");
+  font-family: "Input Mono 2";
+  font-weight: 100;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputMonoCompressed-ExtraLight");
+  font-family: "Input Mono 2";
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputMonoCompressed-ExtraLightItalic");
+  font-family: "Input Mono 2";
+  font-weight: 200;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputMonoCompressed-Light");
+  font-family: "Input Mono 2";
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputMonoCompressed-LightItalic");
+  font-family: "Input Mono 2";
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputMonoCompressed-Regular");
+  font-family: "Input Mono 2";
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputMonoCompressed-Italic");
+  font-family: "Input Mono 2";
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputMonoCompressed-Medium");
+  font-family: "Input Mono 2";
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputMonoCompressed-MediumItalic");
+  font-family: "Input Mono 2";
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputMonoCompressed-Bold");
+  font-family: "Input Mono 2";
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputMonoCompressed-BoldItalic");
+  font-family: "Input Mono 2";
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  src: local("InputMonoCompressed-Black");
+  font-family: "Input Mono 2";
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputMonoCompressed-BlackItalic");
+  font-family: "Input Mono 2";
+  font-weight: 800;
+  font-style: italic;
+}
+
+
+
+
+
+//////////////
+////////
+////
+
+
+@font-face {
+  src: local("InputSerifMono-Thin");
+  font-family: "Input Serif Mono 5";
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputSerifMono-ExtraLight");
+  font-family: "Input Serif Mono 5";
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputSerifMono-Light");
+  font-family: "Input Serif Mono 5";
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputSerifMono-Regular");
+  font-family: "Input Serif Mono 5";
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputSerifMono-Medium");
+  font-family: "Input Serif Mono 5";
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputSerifMono-Bold");
+  font-family: "Input Serif Mono 5";
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  src: local("InputSerifMono-Black");
+  font-family: "Input Serif Mono 5";
+  font-weight: 700;
+  font-style: normal;
+}

@@ -1,0 +1,198 @@
+/*
+ * Your Stylesheet
+ *
+ * This stylesheet is loaded when Atom starts up and is reloaded automatically
+ * when it is changed.
+ *
+ * If you are unfamiliar with LESS, you can read more about it here:
+ * http://www.lesscss.org
+ */
+
+
+/*
+ * * T Y P O G R A P H Y * *
+ *
+ * This stylesheet uses the Input font family: http://input.fontbureau.com
+ *
+ * This stylesheet assumes that your UI and Syntax themes are set in Settings.
+ * Using Solarized Dark myself.
+ *
+ */
+
+@import "input_aff.less";
+@import "input_serifMono_aff.less";
+
+
+@editor-size: 14px;
+@editor-line-height: 1.3em;
+
+@ui-size: 9px;
+@ui-line-height: 1.4em;
+
+@base-family: "Input";
+// Sans, Serif, or Mono
+// Primary style used for keywords, variables
+@primary-style: "Mono";
+@secondary-style: "Serif Mono";
+
+// Proportional Mode
+// @primary-style: "Sans";
+// @secondary-style: "Serif";
+
+
+@ui-style: "Serif";
+@tree-view-style: "Sans";
+@line-number-style: "Mono";
+
+// Width
+// 5: Normal
+// 4: Narrow
+// 3: Condensed
+// 2: Compressed
+@editor-width: 5;
+@ui-width: 3;
+@tab-width: @ui-width;
+@line-number-width: 3;
+@tree-view-width: 3;
+// Editor weight
+// 100: Thin
+// 200: Extra Light
+// 300: Light
+// 400: Regular
+// 500: Medium
+// 700: Bold
+// 800: Black
+@editor-weight: 300;
+@ui-weight: @editor-weight + 100;
+// Get our bold weight by adding 200
+@editor-strong-weight: @editor-weight+200;
+@editor-highlight-weight: @editor-weight+100;
+// Use italics: 'italic'
+// All roman: 'normal'
+@editor-emphasis: 'italic';
+
+// breakpoints
+@mobile:      ~"only screen and (max-width: 699px)";
+@tablet:      ~"only screen and (min-width: 700px) and (max-width: 999px)";
+@desktop:     ~"only screen and (min-width: 1000px) and (max-width: 1499px)";
+@desktop-xl:  ~"only screen and (min-width: 1500px)";
+
+.editor {
+  font-weight: @editor-weight;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: subpixel-antialiased;
+
+}
+
+.editor * {
+  font-size: @editor-size;
+  line-height: @editor-line-height;
+}
+
+.editor {
+  @media @mobile {
+    @editor-width: 2;
+    font-family: "@{base-family} @{primary-style} @{editor-width}";
+  }
+
+  @media @tablet {
+    @editor-width: 3;
+    font-family: "@{base-family} @{primary-style} @{editor-width}";
+  }
+  @media @desktop {
+    @editor-width: 4;
+    font-family: "@{base-family} @{primary-style} @{editor-width}";
+  }
+  @media @desktop-xl {
+    @editor-width: 5;
+    font-family: "@{base-family} @{primary-style} @{editor-width}";
+  }
+}
+
+// responsive solution for serifed types
+
+.string, .comment {
+  @media @mobile {
+    @editor-width: 2;
+    font-family: "@{base-family} @{secondary-style} @{editor-width}";
+  }
+
+  @media @tablet {
+    @editor-width: 3;
+    font-family: "@{base-family} @{secondary-style} @{editor-width}";
+  }
+  @media @desktop {
+    @editor-width: 4;
+    font-family: "@{base-family} @{secondary-style} @{editor-width}";
+  }
+  @media @desktop-xl {
+    @editor-width: 5;
+    font-family: "@{base-family} @{secondary-style} @{editor-width}";
+  }
+}
+
+.class {
+  font-style: italic;
+}
+
+.class.name {
+  font-weight: @editor-strong-weight;
+  border-bottom: 0;
+  text-decoration: none !important;
+}
+
+.function.name {
+  font-style: italic;
+  font-weight: @editor-strong-weight;
+}
+
+.comment {
+  font-style: italic;
+}
+
+.line.cursor-line {
+  font-weight: @editor-highlight-weight;
+  background: #002731;
+}
+
+
+
+
+//////////
+//////////
+//////////
+//////////
+//////////
+////////// UI
+
+.tab {
+  font-family: "@{base-family} @{ui-style} @{tab-width}";
+  font-weight: @ui-weight;
+  font-size: @ui-size;
+}
+
+.status-bar,
+.tool-panel {
+  font-family: "@{base-family} @{ui-style} @{ui-width}";
+  font-weight: @ui-weight;
+}
+
+.line-number {
+  font-family: "@{base-family} @{line-number-style} @{line-number-width}";
+  font-weight: @ui-weight;
+  font-size: @editor-size - 2;
+  width: 100%;
+  -webkit-font-feature-settings: 'ss13';
+}
+
+.line-number.cursor-line {
+  font-weight: @ui-weight + 200;
+}
+
+.tree-view {
+  border-right: 1px solid #000033;
+  font-family: "@{base-family} @{tree-view-style} @{tree-view-width}";
+  .list-item {
+    font-weight: @ui-weight !important;
+    }
+}
