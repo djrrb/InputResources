@@ -1,86 +1,115 @@
 /*
- * Your Stylesheet
+ * A T O M  T Y P O G R A P H I C  S T Y L E S H E E T *
+ * =================================================== *
  *
- * This stylesheet is loaded when Atom starts up and is reloaded automatically
- * when it is changed.
+ * This stylesheet uses the Input font family,
+ * including the unreleased Input Serif Mono beta.
+ * http://input.fontbureau.com
  *
- * If you are unfamiliar with LESS, you can read more about it here:
- * http://www.lesscss.org
+ * This stylesheet assumes that your UI and Syntax
+ * themes are set in Settings. I use Solarized Dark myself.
+ *
+ * – David Jonathan Ross
  */
 
-
-/*
- * * T Y P O G R A P H Y * *
- *
- * This stylesheet uses the Input font family: http://input.fontbureau.com
- *
- * This stylesheet assumes that your UI and Syntax themes are set in Settings.
- * Using Solarized Dark myself.
- *
- */
-
+// @ F O N T - F A C E
 @import "input_aff.less";
 @import "input_serifMono_aff.less";
 
 
-@editor-size: 14px;
-@editor-line-height: 1.3em;
-
-@ui-size: 9px;
-@ui-line-height: 1.4em;
+// V A R I A B L E S
 
 @base-family: "Input";
-// Sans, Serif, or Mono
-// Primary style used for keywords, variables
-@primary-style: "Mono";
-@secondary-style: "Serif Mono";
 
-// Proportional Mode
-// @primary-style: "Sans";
-// @secondary-style: "Serif";
+// Styles:
+//  Sans
+//  Serif
+//  Mono
+//  Serif Mono (beta)
 
+// Widths:
+//  5: Normal
+//  4: Narrow
+//  3: Condensed
+//  2: Compressed
 
-@ui-style: "Serif";
-@tree-view-style: "Sans";
-@line-number-style: "Mono";
-
-// Width
-// 5: Normal
-// 4: Narrow
-// 3: Condensed
-// 2: Compressed
-@editor-width: 5;
-@ui-width: 3;
-@tab-width: @ui-width;
-@line-number-width: 3;
-@tree-view-width: 3;
-// Editor weight
-// 100: Thin
-// 200: Extra Light
-// 300: Light
-// 400: Regular
-// 500: Medium
-// 700: Bold
-// 800: Black
-@editor-weight: 300;
-@ui-weight: @editor-weight + 100;
-// Get our bold weight by adding 200
-@editor-strong-weight: @editor-weight+200;
-@editor-highlight-weight: @editor-weight+100;
-// Use italics: 'italic'
-// All roman: 'normal'
-@editor-emphasis: 'italic';
+// Weights:
+//  100: Thin
+//  200: Extra Light
+//  300: Light
+//  400: Regular
+//  500: Medium
+//  700: Bold
+//  800: Black
 
 // breakpoints
 @mobile:      ~"only screen and (max-width: 699px)";
 @tablet:      ~"only screen and (min-width: 700px) and (max-width: 999px)";
-@desktop:     ~"only screen and (min-width: 1000px) and (max-width: 1499px)";
-@desktop-xl:  ~"only screen and (min-width: 1500px)";
+@desktop:     ~"only screen and (min-width: 1000px) and (max-width: 1299px)";
+@desktop-xl:  ~"only screen and (min-width: 1300px)";
+
+// debug breakpoints
+/*
+.line.cursor-line:after {
+  @media @desktop-xl {
+    content: ' #XL';
+  }
+  @media @desktop {
+    content: ' #L';
+  }
+  @media @tablet {
+    content: ' #M';
+  }
+  @media @mobile {
+    content: ' #S';
+  }
+}
+*/
+
+// editor
+@editor-size: 14px;
+@editor-line-height: 1.3em;
+
+// Primary style used for keywords, variables
+@primary-style: "Mono";
+//@primary-style: "Sans";
+// Secondary style used for strings, comments
+@secondary-style: "Serif Mono";
+//@secondary-style: "Serif";
+
+// editor width (2–5)
+@editor-width: 5;
+// editor weight (100–800)
+@editor-weight: 200;
+// derive bold and highlight weights
+@editor-strong-weight: @editor-weight+300;
+@editor-highlight-weight: @editor-weight+100;
+
+@editor-emphasis: 'italic';
+
+// User Interface fonts
+@ui-size: 9px;
+@ui-line-height: 1.4em;
+@ui-style: "Serif";
+@ui-width: 3;
+@ui-weight: @editor-weight + 100;
+
+@line-number-style: "Mono";
+@line-number-width: 3;
+
+@tab-width: @ui-width;
+@tree-view-style: "Sans";
+@tree-view-width: 3;
+
+
+
+// **  E D I T O R  S T Y L E S  **
 
 .editor {
   font-weight: @editor-weight;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: subpixel-antialiased;
+  text-rendering: optimizeSpeed;
+  -webkit-font-smoothing: subpixel-antialiased; //
+
 
 }
 
@@ -89,6 +118,7 @@
   line-height: @editor-line-height;
 }
 
+// primary style
 .editor {
   @media @mobile {
     @editor-width: 2;
@@ -109,9 +139,8 @@
   }
 }
 
-// responsive solution for serifed types
-
-.string, .comment {
+// secondary style
+.string, .comment, .class {
   @media @mobile {
     @editor-width: 2;
     font-family: "@{base-family} @{secondary-style} @{editor-width}";
@@ -131,12 +160,14 @@
   }
 }
 
-.class {
-  font-style: italic;
+// special stuff
+
+.class, .comment {
+  font-style: @editor-emphasis;
 }
 
 .class.name {
-  font-weight: @editor-strong-weight;
+  font-weight: @editor-strong-weight !important;
   border-bottom: 0;
   text-decoration: none !important;
 }
@@ -144,10 +175,6 @@
 .function.name {
   font-style: italic;
   font-weight: @editor-strong-weight;
-}
-
-.comment {
-  font-style: italic;
 }
 
 .line.cursor-line {
@@ -158,12 +185,7 @@
 
 
 
-//////////
-//////////
-//////////
-//////////
-//////////
-////////// UI
+// **  I N T E R F A C E  S T Y L E S  **
 
 .tab {
   font-family: "@{base-family} @{ui-style} @{tab-width}";
@@ -171,8 +193,7 @@
   font-size: @ui-size;
 }
 
-.status-bar,
-.tool-panel {
+.status-bar, .tool-panel {
   font-family: "@{base-family} @{ui-style} @{ui-width}";
   font-weight: @ui-weight;
 }
