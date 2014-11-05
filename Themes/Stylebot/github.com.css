@@ -1,0 +1,26 @@
+body, input {
+    font-family: "Input Sans Compressed";
+}
+
+.data, .blob-wrapper table tr td {
+    font-family: "Input Mono" ;
+    -webkit-font-feature-settings: 'ss05', 'ss10';
+}
+
+.sd, .nc, .c {
+    font-family: "Input Serif Mono" ;
+    -webkit-font-feature-settings: 'zzzz';
+}
+
+table {
+    margin-top: 2em;
+}
+
+h1, .breadcrumb, .select-menu, {
+    letter-spacing: -.03em;
+}
+
+.commit-title {
+    letter-spacing: -.015em;
+}
+
