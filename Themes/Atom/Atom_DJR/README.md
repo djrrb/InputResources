@@ -1,7 +1,7 @@
 Responsive Atom Stylesheet
 ==========================
 
-<img src="https://raw.githubusercontent.com/FontBureau/InputResources/master/Themes/Atom/sample.png" />
+<img src="https://raw.githubusercontent.com/FontBureau/InputResources/master/Themes/Atom/Atom_DJR/sample.png" />
 
 This is a sample stylesheet using the Input font family, available at <http://input.fontbureau.com>. It uses lot of Less variables and a custom font family structure so it is easy to customize. It is responsive, so you get a narrower font as the window gets narrower.
 
